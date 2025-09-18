@@ -1,0 +1,140 @@
+[
+  {
+    "id": "scholarship_A_gpa35",
+    "name": "Merit Scholars Award",
+    "amount": 2000,
+    "min_gpa": 3.5,
+    "categories": ["STEM", "Merit"],
+    "eligibility": "GPA >= 3.5; open to all majors with strong academic performance",
+    "apply_url": "https://example.org/apply/merit-scholars"
+  },
+  {
+    "id": "scholarship_B_low_income",
+    "name": "Opportunity Grant",
+    "amount": 1500,
+    "min_gpa": 2.5,
+    "categories": ["Need-based"],
+    "eligibility": "Demonstrated financial need; open to undergraduates",
+    "apply_url": "https://example.org/apply/opportunity-grant"
+  },
+  {
+    "id": "scholarship_C_women_stem",
+    "name": "Women in STEM Scholarship",
+    "amount": 2500,
+    "min_gpa": 3.0,
+    "categories": ["STEM", "Women"],
+    "eligibility": "Open to female students in STEM fields",
+    "apply_url": "https://example.org/apply/women-stem"
+  },
+  {
+    "id": "scholarship_D_community",
+    "name": "Community Service Award",
+    "amount": 1000,
+    "min_gpa": 2.8,
+    "categories": ["Service", "Merit"],
+    "eligibility": "Demonstrated community service involvement",
+    "apply_url": "https://example.org/apply/community-service"
+  },
+  {
+    "id": "scholarship_E_international",
+    "name": "Global Scholars Grant",
+    "amount": 3000,
+    "min_gpa": 3.2,
+    "categories": ["International", "Merit"],
+    "eligibility": "For international students with strong academic records",
+    "apply_url": "https://example.org/apply/global-scholars"
+  }
+  ,
+  {
+    "id": "scholarship_F_firstgen",
+    "name": "First Generation College Fund",
+    "amount": 1800,
+    "min_gpa": 2.7,
+    "categories": ["First-generation", "Need-based"],
+    "eligibility": "First in family to attend college",
+    "apply_url": "https://example.org/apply/firstgen"
+  },
+  {
+    "id": "scholarship_G_arts",
+    "name": "Creative Arts Scholarship",
+    "amount": 2200,
+    "min_gpa": 2.9,
+    "categories": ["Arts", "Merit"],
+    "eligibility": "Portfolio required; open to arts majors",
+    "apply_url": "https://example.org/apply/arts"
+  },
+  {
+    "id": "scholarship_H_sports",
+    "name": "Athletic Excellence Award",
+    "amount": 2000,
+    "min_gpa": 2.5,
+    "categories": ["Sports", "Merit"],
+    "eligibility": "Outstanding achievement in sports",
+    "apply_url": "https://example.org/apply/athletics"
+  },
+  {
+    "id": "scholarship_I_minority",
+    "name": "Minority Leaders Scholarship",
+    "amount": 2500,
+    "min_gpa": 3.0,
+    "categories": ["Minority", "Leadership"],
+    "eligibility": "For underrepresented minorities with leadership experience",
+    "apply_url": "https://example.org/apply/minority-leaders"
+  },
+  {
+    "id": "scholarship_J_rural",
+    "name": "Rural Student Grant",
+    "amount": 1700,
+    "min_gpa": 2.6,
+    "categories": ["Rural", "Need-based"],
+    "eligibility": "Students from rural backgrounds",
+    "apply_url": "https://example.org/apply/rural"
+  },
+  {
+    "id": "scholarship_K_stem_merit",
+    "name": "STEM Innovators Scholarship",
+    "amount": 3000,
+    "min_gpa": 3.4,
+    "categories": ["STEM", "Merit"],
+    "eligibility": "STEM majors with innovative project experience",
+    "apply_url": "https://example.org/apply/stem-innovators"
+  },
+  {
+    "id": "scholarship_L_transfer",
+    "name": "Transfer Student Award",
+    "amount": 1200,
+    "min_gpa": 2.8,
+    "categories": ["Transfer", "Merit"],
+    "eligibility": "For students transferring from community colleges",
+    "apply_url": "https://example.org/apply/transfer"
+  },
+  {
+    "id": "scholarship_M_veteran",
+    "name": "Veteran Scholars Grant",
+    "amount": 2500,
+    "min_gpa": 2.5,
+    "categories": ["Veteran", "Service"],
+    "eligibility": "Military veterans pursuing higher education",
+    "apply_url": "https://example.org/apply/veteran"
+  },
+  {
+    "id": "scholarship_N_disability",
+    "name": "Ability Achievement Scholarship",
+    "amount": 2000,
+    "min_gpa": 2.7,
+    "categories": ["Disability", "Merit"],
+    "eligibility": "Students with disabilities; essay required",
+    "apply_url": "https://example.org/apply/ability"
+  },
+  {
+    "id": "scholarship_O_environment",
+    "name": "Green Future Grant",
+    "amount": 2100,
+    "min_gpa": 3.1,
+    "categories": ["Environment", "Merit"],
+    "eligibility": "For students active in environmental causes",
+    "apply_url": "https://example.org/apply/green-future"
+  }
+]
+
+

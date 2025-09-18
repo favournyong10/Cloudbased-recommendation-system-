@@ -1,0 +1,140 @@
+[
+  {
+    "id": "loan_A_student_friendly",
+    "name": "CampusFlex Student Loan",
+    "max_amount": 5000,
+    "interest_rate": 4.2,
+    "grace_period_months": 6,
+    "notes": "Low fees; interest subsidy options for low-income students",
+    "apply_url": "https://example.org/apply/campusflex"
+  },
+  {
+    "id": "loan_B_micro",
+    "name": "MicroAssist Education Loan",
+    "max_amount": 1500,
+    "interest_rate": 3.5,
+    "grace_period_months": 3,
+    "notes": "Good for short-term needs and tuition top-ups",
+    "apply_url": "https://example.org/apply/microassist"
+  },
+  {
+    "id": "loan_C_graduate",
+    "name": "GradAdvance Loan",
+    "max_amount": 10000,
+    "interest_rate": 5.0,
+    "grace_period_months": 12,
+    "notes": "For graduate students; flexible repayment options",
+    "apply_url": "https://example.org/apply/gradadvance"
+  },
+  {
+    "id": "loan_D_parent",
+    "name": "ParentAssist Loan",
+    "max_amount": 7000,
+    "interest_rate": 4.8,
+    "grace_period_months": 0,
+    "notes": "For parents supporting student tuition; no grace period",
+    "apply_url": "https://example.org/apply/parentassist"
+  },
+  {
+    "id": "loan_E_international",
+    "name": "GlobalEd Loan",
+    "max_amount": 8000,
+    "interest_rate": 6.2,
+    "grace_period_months": 6,
+    "notes": "For international students; requires co-signer",
+    "apply_url": "https://example.org/apply/globaled"
+  }
+  ,
+  {
+    "id": "loan_F_short_term",
+    "name": "QuickBridge Short-Term Loan",
+    "max_amount": 2000,
+    "interest_rate": 4.5,
+    "grace_period_months": 2,
+    "notes": "Fast approval for urgent needs",
+    "apply_url": "https://example.org/apply/quickbridge"
+  },
+  {
+    "id": "loan_G_healthcare",
+    "name": "MedPath Healthcare Loan",
+    "max_amount": 12000,
+    "interest_rate": 5.8,
+    "grace_period_months": 9,
+    "notes": "For medical and healthcare students",
+    "apply_url": "https://example.org/apply/medpath"
+  },
+  {
+    "id": "loan_H_tech",
+    "name": "TechLeap Loan",
+    "max_amount": 9000,
+    "interest_rate": 4.9,
+    "grace_period_months": 6,
+    "notes": "For technology and engineering majors",
+    "apply_url": "https://example.org/apply/techleap"
+  },
+  {
+    "id": "loan_I_rural",
+    "name": "RuralAccess Student Loan",
+    "max_amount": 4000,
+    "interest_rate": 3.9,
+    "grace_period_months": 4,
+    "notes": "Special rates for rural students",
+    "apply_url": "https://example.org/apply/ruralaccess"
+  },
+  {
+    "id": "loan_J_transfer",
+    "name": "Transfer Student Loan",
+    "max_amount": 3500,
+    "interest_rate": 4.0,
+    "grace_period_months": 3,
+    "notes": "For students transferring between institutions",
+    "apply_url": "https://example.org/apply/transferloan"
+  },
+  {
+    "id": "loan_K_green",
+    "name": "EcoEdu Green Loan",
+    "max_amount": 6000,
+    "interest_rate": 4.3,
+    "grace_period_months": 5,
+    "notes": "For students in environmental studies",
+    "apply_url": "https://example.org/apply/ecoedu"
+  },
+  {
+    "id": "loan_L_arts",
+    "name": "Artistry Student Loan",
+    "max_amount": 3000,
+    "interest_rate": 4.7,
+    "grace_period_months": 4,
+    "notes": "For students in creative arts programs",
+    "apply_url": "https://example.org/apply/artistry"
+  },
+  {
+    "id": "loan_M_veteran",
+    "name": "Veteran Support Loan",
+    "max_amount": 7000,
+    "interest_rate": 3.8,
+    "grace_period_months": 8,
+    "notes": "For military veterans and their families",
+    "apply_url": "https://example.org/apply/veteransupport"
+  },
+  {
+    "id": "loan_N_disability",
+    "name": "AbilityPlus Loan",
+    "max_amount": 5000,
+    "interest_rate": 4.1,
+    "grace_period_months": 6,
+    "notes": "For students with disabilities",
+    "apply_url": "https://example.org/apply/abilityplus"
+  },
+  {
+    "id": "loan_O_firstgen",
+    "name": "FirstGen Opportunity Loan",
+    "max_amount": 4500,
+    "interest_rate": 4.6,
+    "grace_period_months": 5,
+    "notes": "For first-generation college students",
+    "apply_url": "https://example.org/apply/firstgenloan"
+  }
+]
+
+

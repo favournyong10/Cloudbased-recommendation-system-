@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>MEX FUND - Smart funding made simple</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <!-- Header -->
+        <header class="header" style="box-shadow: 0 2px 12px rgba(0,0,0,0.10); background: rgba(18,26,51,0.98);">
+            <div class="logo" style="font-size: 2rem; color: var(--primary); letter-spacing: 1.5px;">MEX FUND</div>
+            <nav class="nav" style="display: flex; gap: 18px;">
+                <button class="tab-link active" data-tab="home" title="Explore funding options and highlights">Discover</button>
+                <button class="tab-link" data-tab="profile" title="Enter your student details">My Profile</button>
+                <button class="tab-link" data-tab="results" title="See scholarships and loans for you">Opportunities</button>
+                <button class="tab-link" data-tab="saved" title="View your saved opportunities">Bookmarks</button>
+            </nav>
+        </header>
+
+    <main class="container">
+                <section id="tab-home" class="tab active">
+                    <!-- Hero + Slideshow Side by Side -->
+                    <div style="display: flex; flex-direction: row; gap: 48px; align-items: stretch; justify-content: center; flex-wrap: wrap;">
+                        <!-- Hero Section -->
+                        <div class="hero" style="flex: 1 1 340px; min-width: 320px; max-width: 520px; text-align: left; padding: 56px 0 36px 0; display: flex; flex-direction: column; justify-content: center;">
+                            <h1 style="font-size: 2.8rem; font-weight: 800; color: var(--primary); margin-bottom: 12px;">Find Funding That Fits</h1>
+                            <p class="subtitle" style="font-size: 1.3rem; color: var(--muted); margin-bottom: 28px;">One place to discover scholarships and student-friendly loans tailored to you.</p>
+                            <div class="actions" style="justify-content: flex-start;">
+                                <button data-go="profile" class="button primary" style="font-size: 1.1rem; padding: 14px 32px;">Get Started</button>
+                            </div>
+                            <ul class="highlights" style="display: flex; flex-direction: row; gap: 18px; margin: 38px 0 0 0; padding: 0; list-style: none; justify-content: flex-start;">
+                                <li style="background: #181c2b; border-radius: 12px; padding: 18px 28px; min-width: 220px; box-shadow: 0 2px 8px rgba(79,124,255,0.07); border: 1px solid rgba(255,255,255,0.06); font-size: 1.08rem;">Personalized picks by GPA, course, and need</li>
+                                <li style="background: #181c2b; border-radius: 12px; padding: 18px 28px; min-width: 220px; box-shadow: 0 2px 8px rgba(79,124,255,0.07); border: 1px solid rgba(255,255,255,0.06); font-size: 1.08rem;">Compare scholarships and loans side-by-side</li>
+                                <li style="background: #181c2b; border-radius: 12px; padding: 18px 28px; min-width: 220px; box-shadow: 0 2px 8px rgba(79,124,255,0.07); border: 1px solid rgba(255,255,255,0.06); font-size: 1.08rem;">Bookmark, track, and apply when ready</li>
+                            </ul>
+                            <div style="margin-top: 38px;">
+                                <span class="motto" style="color: var(--accent); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.5px;">MEX FUND — Smart funding made simple</span>
+                            </div>
+                        </div>
+                        <!-- Slideshow Section -->
+                        <div class="banner-slideshow" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; min-width: 320px; max-width: 360px; flex: 0 1 340px; margin: 0;">
+                            <div id="slideshow" style="width: 100%; max-width: 320px; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.18); background: #181c2b; position: relative; margin: 0;">
+                                <img id="slideshow-img" src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80" alt="Scholarly student" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.7s; display: block; border-radius: 50%;" />
+                            </div>
+                            <script>
+                                // Simple slideshow for banner
+                                const slideshowImages = [
+                                    'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80', // student with bag
+                                    'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80', // graduation
+                                    'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80', // student with books
+                                    'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80', // group students
+                                    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80', // graduation cap
+                                    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80' // student with backpack
+                                ];
+                                let slideIdx = 0;
+                                setInterval(() => {
+                                    slideIdx = (slideIdx + 1) % slideshowImages.length;
+                                    const img = document.getElementById('slideshow-img');
+                                    if (img) {
+                                        img.style.opacity = 0.2;
+                                        setTimeout(() => {
+                                            img.src = slideshowImages[slideIdx];
+                                            img.style.opacity = 1;
+                                        }, 350);
+                                    }
+                                }, 2600);
+                            </script>
+                        </div>
+                    </div>
+                                        <!-- Trust Section underneath slideshow -->
+                                        <div class="trust-section" style="width:100%;display:flex;justify-content:center;align-items:center;gap:48px;margin:64px 0 64px 0;flex-wrap:wrap;">
+                                            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:180px;">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Students Assisted" style="width:54px;height:54px;filter:drop-shadow(0 2px 8px rgba(79,124,255,0.12));" loading="lazy" />
+                                                <div style="font-size:1.25rem;font-weight:700;color:var(--primary);">500,000+</div>
+                                                <div style="color:var(--muted);font-size:1.05rem;text-align:center;">Students Assisted</div>
+                                            </div>
+                                            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:180px;">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Scholarships and Loans" style="width:54px;height:54px;filter:drop-shadow(0 2px 8px rgba(79,124,255,0.12));" loading="lazy" />
+                                                <div style="font-size:1.25rem;font-weight:700;color:var(--primary);">₦3.5B+</div>
+                                                <div style="color:var(--muted);font-size:1.05rem;text-align:center;">Scholarships & Loans Offered</div>
+                                            </div>
+                                            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:180px;">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Futures Secured" style="width:54px;height:54px;filter:drop-shadow(0 2px 8px rgba(79,124,255,0.12));" loading="lazy" />
+                                                <div style="font-size:1.25rem;font-weight:700;color:var(--primary);">Futures Secured</div>
+                                                <div style="color:var(--muted);font-size:1.05rem;text-align:center;">Empowering the Next Generation</div>
+                                            </div>
+                                        </div>
+
+                <!-- Collaborations Section -->
+                <section class="collaborations" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px;">
+                    <h2 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 32px; font-weight: 700;">Our Collaborations</h2>
+                    <div style="display: flex; flex-wrap: wrap; gap: 36px; justify-content: center; align-items: center;">
+                        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                            <img src="data:image/png;base64,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" alt="MTN" style="height: 48px; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 6px;" loading="lazy" />
+                            <span style="color: var(--text); font-size: 1.08rem; font-weight: 600;">MTN</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                            <img src="data:image/png;base64,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" alt="Dangote" style="height: 48px; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 6px;" loading="lazy" />
+                            <span style="color: var(--text); font-size: 1.08rem; font-weight: 600;">Dangote</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                            <img src="data:image/png;base64,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" alt="Skillshare" style="height: 48px; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 6px;" loading="lazy" />
+                            <span style="color: var(--text); font-size: 1.08rem; font-weight: 600;">Skillshare</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Googleplex-Logo.svg" alt="Google" style="height: 48px; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 6px;" loading="lazy" />
+                            <span style="color: var(--text); font-size: 1.08rem; font-weight: 600;">Google</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/UNESCO_logo.svg" alt="UNESCO" style="height: 48px; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 6px;" loading="lazy" />
+                            <span style="color: var(--text); font-size: 1.08rem; font-weight: 600;">UNESCO</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; min-width: 120px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Microsoft_logo_%282012%29.svg" alt="Microsoft" style="height: 48px; margin-bottom: 10px; background: #fff; border-radius: 8px; padding: 6px;" loading="lazy" />
+                            <span style="color: var(--text); font-size: 1.08rem; font-weight: 600;">Microsoft</span>
+                        </div>
+                    </div>
+                </section>
+                </section>
+
+        <section id="tab-profile" class="tab">
+            <main class="container" style="max-width: 700px; margin: 48px auto 0 auto; padding: 32px 18px; background: #181c2b; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.10);">
+                <h2 style="color: var(--primary); font-size: 2.2rem; font-weight: 700; margin-bottom: 32px; text-align: center;">Your Student Profile</h2>
+                <form id="profile-form" class="grid" style="display: grid; gap: 32px;">
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>Full Name</span>
+                        <input type="text" id="name" placeholder="Jane Doe" required>
+                    </label>
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>Email</span>
+                        <input type="email" id="email" placeholder="jane@example.com" required>
+                    </label>
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>University / Institution</span>
+                        <select id="institution" required style="width:100%;padding:18px 18px;margin-top:8px;border-radius:12px;border:1px solid #2c3e50;background:#23263a;color:var(--text);font-size:18px;">
+                            <option value="">Select your university</option>
+                            <optgroup label="Government Universities">
+                                <option value="University of Lagos">University of Lagos</option>
+                                <option value="Obafemi Awolowo University">Obafemi Awolowo University</option>
+                                <option value="Ahmadu Bello University">Ahmadu Bello University</option>
+                                <option value="University of Ibadan">University of Ibadan</option>
+                                <option value="University of Nigeria, Nsukka">University of Nigeria, Nsukka</option>
+                                <option value="Federal University of Technology, Akure">Federal University of Technology, Akure</option>
+                                <option value="University of Benin">University of Benin</option>
+                                <option value="University of Port Harcourt">University of Port Harcourt</option>
+                                <option value="Federal University of Technology, Minna">Federal University of Technology, Minna</option>
+                                <option value="Federal University of Agriculture, Abeokuta">Federal University of Agriculture, Abeokuta</option>
+                                <option value="Ladoke Akintola University of Technology">Ladoke Akintola University of Technology</option>
+                                <option value="Nnamdi Azikiwe University">Nnamdi Azikiwe University</option>
+                                <option value="University of Calabar">University of Calabar</option>
+                                <option value="Bayero University Kano">Bayero University Kano</option>
+                                <option value="Federal University, Oye-Ekiti">Federal University, Oye-Ekiti</option>
+                                <option value="Usmanu Danfodiyo University, Sokoto">Usmanu Danfodiyo University, Sokoto</option>
+                                <option value="Federal University of Petroleum Resources, Effurun">Federal University of Petroleum Resources, Effurun</option>
+                            </optgroup>
+                            <optgroup label="Private Universities">
+                                <option value="Covenant University">Covenant University</option>
+                                <option value="Babcock University">Babcock University</option>
+                                <option value="Afe Babalola University">Afe Babalola University</option>
+                                <option value="Bowen University">Bowen University</option>
+                                <option value="Redeemer's University">Redeemer's University</option>
+                                <option value="Pan-Atlantic University">Pan-Atlantic University</option>
+                                <option value="American University of Nigeria">American University of Nigeria</option>
+                                <option value="Landmark University">Landmark University</option>
+                                <option value="Bells University of Technology">Bells University of Technology</option>
+                                <option value="Igbinedion University">Igbinedion University</option>
+                                <option value="Joseph Ayo Babalola University">Joseph Ayo Babalola University</option>
+                                <option value="Lead City University">Lead City University</option>
+                                <option value="Ajayi Crowther University">Ajayi Crowther University</option>
+                                <option value="Caleb University">Caleb University</option>
+                                <option value="Baze University">Baze University</option>
+                                <option value="Veritas University">Veritas University</option>
+                                <option value="Madonna University">Madonna University</option>
+                                <option value="Al-Hikmah University">Al-Hikmah University</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>Course of Study</span>
+                        <select id="course" required style="width:100%;padding:14px 18px;margin-top:8px;border-radius:12px;border:1px solid #2c3e50;background:#23263a;color:var(--text);font-size:18px;">
+                            <option value="">Select your course</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Agricultural Science">Agricultural Science</option>
+                            <option value="Architecture">Architecture</option>
+                            <option value="Biochemistry">Biochemistry</option>
+                            <option value="Biological Sciences">Biological Sciences</option>
+                            <option value="Business Administration">Business Administration</option>
+                            <option value="Chemical Engineering">Chemical Engineering</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Computer Engineering">Computer Engineering</option>
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Dentistry">Dentistry</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Education">Education</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="English Language">English Language</option>
+                            <option value="Environmental Science">Environmental Science</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Geology">Geology</option>
+                            <option value="History">History</option>
+                            <option value="Industrial Chemistry">Industrial Chemistry</option>
+                            <option value="International Relations">International Relations</option>
+                            <option value="Law">Law</option>
+                            <option value="Linguistics">Linguistics</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Mass Communication">Mass Communication</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Medicine & Surgery">Medicine & Surgery</option>
+                            <option value="Microbiology">Microbiology</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Philosophy">Philosophy</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Political Science">Political Science</option>
+                            <option value="Psychology">Psychology</option>
+                            <option value="Public Administration">Public Administration</option>
+                            <option value="Sociology">Sociology</option>
+                            <option value="Statistics">Statistics</option>
+                            <option value="Theatre Arts">Theatre Arts</option>
+                            <option value="Veterinary Medicine">Veterinary Medicine</option>
+                            <option value="Other">Other (please specify below)</option>
+                        </select>
+                        <input type="text" id="course-other" placeholder="If Other, please specify" style="margin-top:10px;display:none;" />
+                    </label>
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>Current GPA</span>
+                        <input type="number" id="gpa" min="0" max="4" step="0.01" placeholder="3.60" required>
+                    </label>
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>Funding Preference</span>
+                        <select id="preference" required>
+                            <option value="both">Both</option>
+                            <option value="scholarship">Scholarships only</option>
+                            <option value="loan">Loans only</option>
+                        </select>
+                    </label>
+                    <label style="display: flex; flex-direction: column; gap: 8px;">
+                        <span>Special Categories (optional)</span>
+                        <input type="text" id="categories" placeholder="e.g., STEM, low-income, female in tech">
+                    </label>
+                    <div class="form-actions" style="display: flex; justify-content: center;">
+                        <button class="button primary" type="submit" style="padding: 14px 40px; font-size: 1.15rem;">Get Recommendations</button>
+                    </div>
+                </form>
+            </main>
+        </section>
+
+        <section id="tab-results" class="tab">
+            <div class="results-header">
+                <h2 style="margin-top:94px;">Recommended Opportunities</h2>
+                <div class="filters">
+                    <button class="chip active" data-filter="both">Both</button>
+                    <button class="chip" data-filter="scholarship">Scholarships</button>
+                    <button class="chip" data-filter="loan">Loans</button>
+                </div>
+            </div>
+            <div id="cards" class="cards"></div>
+        </section>
+
+        <section id="tab-saved" class="tab">
+            <h2 style="margin-top:64px;">Saved Items</h2>
+            <div id="saved-cards" class="cards"></div>
+        </section>
+    </main>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px;">
+            <h2 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 32px; font-weight: 700;">What Students & Parents Say</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
+                <div class="card" style="background: #181c2b; border-radius: 14px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+                    <p style="font-size: 1.08rem; color: var(--text);">“MEX FUND helped me find a scholarship I never knew existed. The process was so easy!”</p>
+                    <div style="margin-top: 12px; color: var(--muted); font-size: 0.98rem;">— Sofia R., Computer Science Student</div>
+                </div>
+                <div class="card" style="background: #181c2b; border-radius: 14px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+                    <p style="font-size: 1.08rem; color: var(--text);">“We were worried about tuition, but the loan options here made it manageable for our family.”</p>
+                    <div style="margin-top: 12px; color: var(--muted); font-size: 0.98rem;">— Mr. & Mrs. Alvarez, Parents</div>
+                </div>
+                <div class="card" style="background: #181c2b; border-radius: 14px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+                    <p style="font-size: 1.08rem; color: var(--text);">“I loved how I could compare scholarships and loans side by side. Super helpful!”</p>
+                    <div style="margin-top: 12px; color: var(--muted); font-size: 0.98rem;">— Daniel M., Engineering Student</div>
+                </div>
+                <div class="card" style="background: #181c2b; border-radius: 14px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+                    <p style="font-size: 1.08rem; color: var(--text);">“Thanks to MEX FUND, my daughter received a grant that covered her first year!”</p>
+                    <div style="margin-top: 12px; color: var(--muted); font-size: 0.98rem;">— Mrs. Chen, Parent</div>
+                </div>
+                <div class="card" style="background: #181c2b; border-radius: 14px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+                    <p style="font-size: 1.08rem; color: var(--text);">“The recommendations were spot on for my GPA and interests. Highly recommend!”</p>
+                    <div style="margin-top: 12px; color: var(--muted); font-size: 0.98rem;">— Priya S., Business Student</div>
+                </div>
+                <div class="card" style="background: #181c2b; border-radius: 14px; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+                    <p style="font-size: 1.08rem; color: var(--text);">“Navigating financial aid was overwhelming, but this site made it simple and stress-free.”</p>
+                    <div style="margin-top: 12px; color: var(--muted); font-size: 0.98rem;">— Luis G., Parent</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section class="analytics" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px;">
+            <h2 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 32px; font-weight: 700;">Impact Analytics</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-end;">
+                <div style="flex:1; min-width: 260px; background: #181c2b; border-radius: 14px; padding: 28px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10); text-align: center;">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: #ff4d4f;">1,200,000+</div>
+                    <div style="color: var(--muted); font-size: 1.1rem; margin-bottom: 12px;">Students who struggled due to lack of funding</div>
+                    <div style="height: 18px; background: #ff4d4f; border-radius: 8px; width: 90%; margin: 0 auto 0 auto; opacity: 0.7;"></div>
+                </div>
+                <div style="flex:1; min-width: 260px; background: #181c2b; border-radius: 14px; padding: 28px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.10); text-align: center;">
+                    <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary);">500,000+</div>
+                    <div style="color: var(--muted); font-size: 1.1rem; margin-bottom: 12px;">Students empowered by MEX FUND</div>
+                    <div style="height: 18px; background: var(--primary); border-radius: 8px; width: 60%; margin: 0 auto 0 auto; opacity: 0.7;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px; text-align: center;">
+            <h2 style="color: var(--primary); font-size: 2rem; font-weight: 700; margin-bottom: 18px;">Ready to Secure Your Future?</h2>
+            <p style="color: var(--muted); font-size: 1.15rem; margin-bottom: 24px;">Join thousands of students who have found the right funding with MEX FUND.</p>
+            <a href="#" data-go="profile" class="button primary" style="font-size: 1.2rem; padding: 16px 40px;">Get Started Now</a>
+        </section>
+
+        <!-- Opt-in Offer Section -->
+        <section class="opt-in" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px; text-align: center;">
+            <h2 style="color: var(--primary); font-size: 1.7rem; font-weight: 700; margin-bottom: 12px;">Stay Updated!</h2>
+            <p style="color: var(--muted); font-size: 1.08rem; margin-bottom: 18px;">Get the latest scholarships, loan offers, and funding tips delivered to your inbox.</p>
+            <form style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Enter your email" required style="flex: 1 1 220px; padding: 14px 18px; border-radius: 8px; border: 1px solid #2c3e50; background: #23263a; color: var(--text); font-size: 1.08rem;">
+                <button type="submit" class="button primary" style="padding: 14px 32px; font-size: 1.08rem;">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px;">
+            <h2 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 32px; font-weight: 700;">Frequently Asked Questions</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+                <div>
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">Who can apply for funding?</h4>
+                    <p style="color: var(--text);">Any student enrolled in a recognized institution in Nigeria can apply for scholarships or loans through MEX FUND.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">Is there a fee to use MEX FUND?</h4>
+                    <p style="color: var(--text);">No, MEX FUND is completely free for students seeking funding opportunities.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">How do I know if I qualify?</h4>
+                    <p style="color: var(--text);">Our platform matches you with opportunities based on your profile, GPA, course, and special categories.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">How soon will I get a response?</h4>
+                    <p style="color: var(--text);">Most students receive recommendations instantly after submitting their profile. Application responses depend on the funding provider.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section class="contact-info" style="max-width: 900px; margin: 0 auto 48px auto; padding: 0 18px;">
+            <h2 style="text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 24px; font-weight: 700;">Contact MEX FUND</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start;">
+                <div style="flex:1; min-width: 260px;">
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">Email</h4>
+                    <p style="color: var(--text);">support@mexfund.com</p>
+                </div>
+                <div style="flex:1; min-width: 260px;">
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">Phone</h4>
+                    <p style="color: var(--text);">+234 800 123 4567</p>
+                </div>
+                <div style="flex:1; min-width: 260px;">
+                    <h4 style="color: var(--primary); font-size: 1.1rem; font-weight: 600;">Office</h4>
+                    <p style="color: var(--text);">12 Unity Avenue, Victoria Island, Lagos, Nigeria</p>
+                </div>
+            </div>
+        </section>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">×</button>
+            <h3 id="modal-title"></h3>
+            <div id="modal-body"></div>
+            <div class="modal-actions">
+                <a id="modal-link" class="button primary" target="_blank" rel="noopener">Apply now</a>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Footer -->
+        <footer style="background: #121a33; color: var(--muted); text-align: center; padding: 32px 0 18px 0; margin-top: 48px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 1.08rem; letter-spacing: 0.2px;">
+            <div style="margin-bottom: 8px;">
+                &copy; 2025 MEX FUND. All rights reserved.
+            </div>
+            <div style="margin-bottom: 16px;">
+                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Contact</a>
+                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">About</a>
+                <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+            </div>
+            <div style="margin-bottom: 8px;">
+                <a href="https://linkedin.com/company/mexfund" target="_blank" rel="noopener" title="LinkedIn" style="margin: 0 8px; color: var(--primary); font-size: 1.5rem;"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 24px; width: 24px; filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(210deg); vertical-align: middle;"></a>
+                <a href="https://github.com/mexfund" target="_blank" rel="noopener" title="GitHub" style="margin: 0 8px; color: var(--primary); font-size: 1.5rem;"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="height: 24px; width: 24px; filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(210deg); vertical-align: middle;"></a>
+                <a href="https://instagram.com/mexfund" target="_blank" rel="noopener" title="Instagram" style="margin: 0 8px; color: var(--primary); font-size: 1.5rem;"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height: 24px; width: 24px; filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(310deg); vertical-align: middle;"></a>
+                <a href="https://facebook.com/mexfund" target="_blank" rel="noopener" title="Facebook" style="margin: 0 8px; color: var(--primary); font-size: 1.5rem;"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height: 24px; width: 24px; filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(210deg); vertical-align: middle;"></a>
+                <a href="https://x.com/mexfund" target="_blank" rel="noopener" title="X" style="margin: 0 8px; color: var(--primary); font-size: 1.5rem;"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" style="height: 24px; width: 24px; filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(210deg); vertical-align: middle;"></a>
+                <a href="https://threads.net/@mexfund" target="_blank" rel="noopener" title="Threads" style="margin: 0 8px; color: var(--primary); font-size: 1.5rem;"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/threads.svg" alt="Threads" style="height: 24px; width: 24px; filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(310deg); vertical-align: middle;"></a>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        </body>
+        </html>
+
+

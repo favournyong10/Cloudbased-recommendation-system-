@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\backend\app.py", line 1, in <module>
+    from flask import Flask, jsonify
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\flask\__init__.py", line 5, in <module>
+    from . import json as json
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\flask\json\__init__.py", line 6, in <module>
+    from ..globals import current_app
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\flask\globals.py", line 6, in <module>
+    from werkzeug.local import LocalProxy
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\werkzeug\__init__.py", line 1, in <module>
+    from .serving import run_simple as run_simple
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\werkzeug\serving.py", line 35, in <module>
+    from .exceptions import InternalServerError
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\werkzeug\exceptions.py", line 52, in <module>
+    from markupsafe import escape
+  File "C:\Users\HP\Desktop\projects\mex-fund-demo\.venv\Lib\site-packages\markupsafe\__init__.py", line 8, in <module>
+    from ._speedups import _escape_inner
+KeyboardInterrupt
